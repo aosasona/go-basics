@@ -7,13 +7,13 @@ func main() {
 	fmt.Println(result)
 }
 
-func checkAge(age int) string {
-	switch age {
-	case 18:
+func checkAge(value int) string {
+	switch age := value; {
+	case age < 18:
+		return "You are a child"
+	case age >= 18:
 		return "You are eligible to drink"
-	case 21:
-		return "You haven't had your first drink?"
-	case 60:
+	case age <= 60:
 		return "You are eligible to retire, stop drinking"
 	default:
 		return "Sorry, IDK"
