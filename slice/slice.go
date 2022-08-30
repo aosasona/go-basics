@@ -42,4 +42,10 @@ func main() {
 		fmt.Println("Name - ", combinedStudents[i].firstName)
 		i++
 	}
+
+	// using range
+	fmt.Println("...Using range...")
+	for _, student := range combinedStudents {
+		fmt.Println("Name - ", student.firstName)
+	}
 }
